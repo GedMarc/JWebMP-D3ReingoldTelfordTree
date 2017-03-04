@@ -21,6 +21,7 @@ import za.co.mmagon.jwebswing.base.html.attributes.*;
 import za.co.mmagon.jwebswing.base.html.interfaces.children.*;
 import za.co.mmagon.jwebswing.base.html.interfaces.events.*;
 import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
  * An interactive version of the Reingold–Tilford Tree
@@ -29,6 +30,7 @@ import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
  * @since 29 Aug 2015
  * @version 1.0
  */
+@ComponentInformation(name = "Reingold-Tilford Tree", description = "A D3 generated dynamically placed tree based on values and space available", url = "https://sourceforge.net/p/jwebswing/jqd3/")
 public class JWReingoldTilfordTree extends Div<NoChildren, NoAttributes, JWReingoldTilfordTreeFeature, NoEvents, JWRadialReingoldTilfordTree>
 {
 
