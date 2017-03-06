@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -36,8 +36,8 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
                    pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree/wiki",
                    pluginOriginalHomepage = "http://txt2vz.appspot.com/",
                    pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/D3ReingoldTelfordTree.jar/download",
-                   pluginIconUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.jpg",
-                   pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.jpg",
+                   pluginIconUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
+                   pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
                    pluginLastUpdatedDate = "2017/03/04"
 )
 public class D3ReingoldTilfordTreePageConfigurator extends PageConfigurator
