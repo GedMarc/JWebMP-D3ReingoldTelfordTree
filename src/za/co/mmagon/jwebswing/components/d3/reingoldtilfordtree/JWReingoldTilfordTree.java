@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,22 +16,20 @@
  */
 package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.base.html.*;
-import za.co.mmagon.jwebswing.base.html.attributes.*;
-import za.co.mmagon.jwebswing.base.html.interfaces.children.*;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.*;
-import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
+import za.co.mmagon.jwebswing.base.html.Div;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
  * An interactive version of the Reingold–Tilford Tree
  * <p>
  * @author Marc Magon
+ * @param <J>
+ *
  * @since 29 Aug 2015
  * @version 1.0
  */
 @ComponentInformation(name = "Reingold-Tilford Tree", description = "A D3 generated dynamically placed tree based on values and space available", url = "https://sourceforge.net/p/jwebswing/jqd3/")
-public class JWReingoldTilfordTree extends Div<NoChildren, NoAttributes, JWReingoldTilfordTreeFeature, NoEvents, JWRadialReingoldTilfordTree>
+public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>> extends Div
 {
 
     private static final long serialVersionUID = 1L;
