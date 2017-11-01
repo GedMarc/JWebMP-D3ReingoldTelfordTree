@@ -21,140 +21,139 @@ import za.co.mmagon.jwebswing.htmlbuilder.css.measurement.MeasurementCSSImpl;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
 /**
- *
  * @author Marc Magon
- * @since 06 Sep 2015
  * @version 1.0
+ * @since 06 Sep 2015
  */
 public class JWReingoldTilfordTreeNodeOptions extends JavaScriptPart
 {
 
-    private static final long serialVersionUID = 1L;
-    private String markerType;
-    private Double markerSize;
-    private String fill;
-    private String stroke;
-    private String strokeWidth;
-    private Integer marginLeft;
-    private Integer marginRight;
-    private Integer marginTop;
-    private Integer marginBottom;
-    private Double fillOpacity;
-    private Double strokeOpacity;
+	private static final long serialVersionUID = 1L;
+	private String markerType;
+	private Double markerSize;
+	private String fill;
+	private String stroke;
+	private String strokeWidth;
+	private Integer marginLeft;
+	private Integer marginRight;
+	private Integer marginTop;
+	private Integer marginBottom;
+	private Double fillOpacity;
+	private Double strokeOpacity;
 
-    public JWReingoldTilfordTreeNodeOptions()
-    {
+	public JWReingoldTilfordTreeNodeOptions()
+	{
+		//Nothing needed
+	}
 
-    }
+	public String getMarkerType()
+	{
+		return markerType;
+	}
 
-    public String getMarkerType()
-    {
-        return markerType;
-    }
+	public void setMarkerType(String markerType)
+	{
+		this.markerType = markerType;
+	}
 
-    public void setMarkerType(String markerType)
-    {
-        this.markerType = markerType;
-    }
+	public Double getMarkerSize()
+	{
+		return markerSize;
+	}
 
-    public Double getMarkerSize()
-    {
-        return markerSize;
-    }
+	public void setMarkerSize(Double markerSize)
+	{
+		this.markerSize = markerSize;
+	}
 
-    public void setMarkerSize(Double markerSize)
-    {
-        this.markerSize = markerSize;
-    }
+	public String getFill()
+	{
+		return fill;
+	}
 
-    public String getFill()
-    {
-        return fill;
-    }
+	public void setFill(ColourHex fill)
+	{
+		this.fill = fill.getValue();
+	}
 
-    public void setFill(ColourHex fill)
-    {
-        this.fill = fill.getValue();
-    }
+	public String getStroke()
+	{
+		return stroke;
+	}
 
-    public String getStroke()
-    {
-        return stroke;
-    }
+	public void setStroke(ColourHex stroke)
+	{
+		this.stroke = stroke.getValue();
+	}
 
-    public void setStroke(ColourHex stroke)
-    {
-        this.stroke = stroke.getValue();
-    }
+	public String getStrokeWidth()
+	{
+		return strokeWidth;
+	}
 
-    public String getStrokeWidth()
-    {
-        return strokeWidth;
-    }
+	public void setStrokeWidth(MeasurementCSSImpl strokeWidth)
+	{
+		this.strokeWidth = strokeWidth.toString(true).replace("'", "");
+	}
 
-    public void setStrokeWidth(MeasurementCSSImpl strokeWidth)
-    {
-        this.strokeWidth = strokeWidth.toString(true).replace("'", "");
-    }
+	public Integer getMarginLeft()
+	{
+		return marginLeft;
+	}
 
-    public Integer getMarginLeft()
-    {
-        return marginLeft;
-    }
+	public void setMarginLeft(Integer marginLeft)
+	{
+		this.marginLeft = marginLeft;
+	}
 
-    public void setMarginLeft(Integer marginLeft)
-    {
-        this.marginLeft = marginLeft;
-    }
+	public Integer getMarginRight()
+	{
+		return marginRight;
+	}
 
-    public Integer getMarginRight()
-    {
-        return marginRight;
-    }
+	public void setMarginRight(Integer marginRight)
+	{
+		this.marginRight = marginRight;
+	}
 
-    public void setMarginRight(Integer marginRight)
-    {
-        this.marginRight = marginRight;
-    }
+	public Integer getMarginTop()
+	{
+		return marginTop;
+	}
 
-    public Integer getMarginTop()
-    {
-        return marginTop;
-    }
+	public void setMarginTop(Integer marginTop)
+	{
+		this.marginTop = marginTop;
+	}
 
-    public void setMarginTop(Integer marginTop)
-    {
-        this.marginTop = marginTop;
-    }
+	public Integer getMarginBottom()
+	{
+		return marginBottom;
+	}
 
-    public Integer getMarginBottom()
-    {
-        return marginBottom;
-    }
+	public void setMarginBottom(Integer marginBottom)
+	{
+		this.marginBottom = marginBottom;
+	}
 
-    public void setMarginBottom(Integer marginBottom)
-    {
-        this.marginBottom = marginBottom;
-    }
+	public Double getFillOpacity()
+	{
+		return fillOpacity;
+	}
 
-    public Double getFillOpacity()
-    {
-        return fillOpacity;
-    }
+	public void setFillOpacity(Double fillOpacity)
+	{
+		this.fillOpacity = fillOpacity;
+	}
 
-    public void setFillOpacity(Double fillOpacity)
-    {
-        this.fillOpacity = fillOpacity;
-    }
+	public Double getStrokeOpacity()
+	{
+		return strokeOpacity;
+	}
 
-    public Double getStrokeOpacity()
-    {
-        return strokeOpacity;
-    }
-
-    public void setStrokeOpacity(Double strokeOpacity)
-    {
-        this.strokeOpacity = strokeOpacity;
-    }
+	public void setStrokeOpacity(Double strokeOpacity)
+	{
+		this.strokeOpacity = strokeOpacity;
+	}
 
 }

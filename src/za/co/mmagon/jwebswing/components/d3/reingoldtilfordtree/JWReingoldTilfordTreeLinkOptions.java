@@ -29,7 +29,7 @@ public class JWReingoldTilfordTreeLinkOptions extends JWReingoldTilfordTreeNodeO
 
     public JWReingoldTilfordTreeLinkOptions()
     {
-
+		//No configuration required
     }
 
 }

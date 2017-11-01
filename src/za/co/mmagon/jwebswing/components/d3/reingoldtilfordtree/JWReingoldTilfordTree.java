@@ -34,7 +34,6 @@ public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>> extends D
 
     private static final long serialVersionUID = 1L;
     private JWReingoldTilfordTreeFeature feature;
-    private JWReingoldTilfordTreeOptions options;
 
     public JWReingoldTilfordTree()
     {
@@ -42,7 +41,7 @@ public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>> extends D
         addFeature(feature);
 
     }
-
+	@Override
     public JWReingoldTilfordTreeOptions getOptions()
     {
         return getFeature().getOptions();
@@ -58,4 +57,37 @@ public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>> extends D
         this.feature = feature;
     }
 
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JWReingoldTilfordTree<?> that = (JWReingoldTilfordTree<?>) o;
+
+		if (!getFeature().equals(that.getFeature()))
+		{
+			return false;
+		}
+		return getOptions().equals(that.getOptions());
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getFeature().hashCode();
+		result = 31 * result + getOptions().hashCode();
+		return result;
+	}
 }

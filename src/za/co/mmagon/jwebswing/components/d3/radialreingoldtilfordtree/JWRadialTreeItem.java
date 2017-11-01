@@ -16,9 +16,11 @@
  */
 package za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree;
 
-import java.util.ArrayList;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A unique item in the radial tree
@@ -31,7 +33,7 @@ public class JWRadialTreeItem extends JavaScriptPart
 {
 
     private String name;
-    private ArrayList<JWRadialTreeItem> children;
+    private List<JWRadialTreeItem> children;
 
     public JWRadialTreeItem()
     {
@@ -73,7 +75,7 @@ public class JWRadialTreeItem extends JavaScriptPart
      * <p>
      * @return
      */
-    public ArrayList<JWRadialTreeItem> getChildren()
+    public List<JWRadialTreeItem> getChildren()
     {
         if (children == null)
         {
@@ -87,7 +89,7 @@ public class JWRadialTreeItem extends JavaScriptPart
      * <p>
      * @param children
      */
-    public void setChildren(ArrayList<JWRadialTreeItem> children)
+    public void setChildren(List<JWRadialTreeItem> children)
     {
         this.children = children;
     }
@@ -100,7 +102,7 @@ public class JWRadialTreeItem extends JavaScriptPart
 
     public JWRadialTreeItem add(String item)
     {
-        JWRadialTreeItem newItem = new JWRadialTreeItem(name);
+        JWRadialTreeItem newItem = new JWRadialTreeItem(item);
         getChildren().add(newItem);
         return newItem;
     }

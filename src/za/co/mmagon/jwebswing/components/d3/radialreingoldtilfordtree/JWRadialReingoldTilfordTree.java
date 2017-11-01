@@ -49,6 +49,7 @@ public class JWRadialReingoldTilfordTree
         addFeature(getFeature());
     }
 
+    @Override
     public JWReingoldTilfordTreeOptions getOptions()
     {
         return getFeature().getOptions();
@@ -68,4 +69,15 @@ public class JWRadialReingoldTilfordTree
         this.feature = feature;
     }
 
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return super.hashCode();
+	}
 }

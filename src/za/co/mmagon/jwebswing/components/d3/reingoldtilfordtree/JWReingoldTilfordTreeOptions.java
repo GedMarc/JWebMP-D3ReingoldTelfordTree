@@ -69,7 +69,7 @@ public class JWReingoldTilfordTreeOptions extends JavaScriptPart
 
     public JWReingoldTilfordTreeOptions()
     {
-
+		//Option set for the nodes
     }
 
     /**

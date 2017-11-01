@@ -23,129 +23,128 @@ import za.co.mmagon.jwebswing.htmlbuilder.css.measurement.MeasurementCSSImpl;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
 /**
- *
  * @author Marc Magon
- * @since 06 Sep 2015
  * @version 1.0
+ * @since 06 Sep 2015
  */
 public class JWReingoldTilfordTreeTextOptions extends JavaScriptPart
 {
 
-    private static final long serialVersionUID = 1L;
-    private MeasurementCSSImpl fontSize;
-    private FontFamilies fontName;
-    private FontWeights fontWeight;
-    private String fontColour;
-    private Double fillOpacity;
-    private Integer marginLeft;
-    private Integer marginRight;
-    private Integer marginTop;
-    private Integer marginBottom;
-    private String backgroundColour;
+	private static final long serialVersionUID = 1L;
+	private MeasurementCSSImpl fontSize;
+	private FontFamilies fontName;
+	private FontWeights fontWeight;
+	private String fontColour;
+	private Double fillOpacity;
+	private Integer marginLeft;
+	private Integer marginRight;
+	private Integer marginTop;
+	private Integer marginBottom;
+	private String backgroundColour;
 
-    public JWReingoldTilfordTreeTextOptions()
-    {
+	public JWReingoldTilfordTreeTextOptions()
+	{
+		//No config needed
+	}
 
-    }
+	public MeasurementCSSImpl getFontSize()
+	{
+		return fontSize;
+	}
 
-    public MeasurementCSSImpl getFontSize()
-    {
-        return fontSize;
-    }
+	public void setFontSize(MeasurementCSSImpl fontSize)
+	{
+		this.fontSize = fontSize;
+	}
 
-    public void setFontSize(MeasurementCSSImpl fontSize)
-    {
-        this.fontSize = fontSize;
-    }
+	public FontFamilies getFontName()
+	{
+		return fontName;
+	}
 
-    public FontFamilies getFontName()
-    {
-        return fontName;
-    }
+	public void setFontName(FontFamilies fontName)
+	{
+		this.fontName = fontName;
+	}
 
-    public void setFontName(FontFamilies fontName)
-    {
-        this.fontName = fontName;
-    }
+	public FontWeights getFontWeight()
+	{
+		return fontWeight;
+	}
 
-    public FontWeights getFontWeight()
-    {
-        return fontWeight;
-    }
+	public void setFontWeight(FontWeights fontWeight)
+	{
+		this.fontWeight = fontWeight;
+	}
 
-    public void setFontWeight(FontWeights fontWeight)
-    {
-        this.fontWeight = fontWeight;
-    }
+	public String getFontColour()
+	{
+		return fontColour;
+	}
 
-    public String getFontColour()
-    {
-        return fontColour;
-    }
+	public void setFontColour(ColourHex fontColour)
+	{
+		this.fontColour = fontColour.getValue();
+	}
 
-    public void setFontColour(ColourHex fontColour)
-    {
-        this.fontColour = fontColour.getValue();
-    }
+	public Double getFillOpacity()
+	{
+		return fillOpacity;
+	}
 
-    public Double getFillOpacity()
-    {
-        return fillOpacity;
-    }
+	public void setFillOpacity(Double fillOpacity)
+	{
+		this.fillOpacity = fillOpacity;
+	}
 
-    public void setFillOpacity(Double fillOpacity)
-    {
-        this.fillOpacity = fillOpacity;
-    }
+	public Integer getMarginLeft()
+	{
+		return marginLeft;
+	}
 
-    public Integer getMarginLeft()
-    {
-        return marginLeft;
-    }
+	public void setMarginLeft(Integer marginLeft)
+	{
+		this.marginLeft = marginLeft;
+	}
 
-    public void setMarginLeft(Integer marginLeft)
-    {
-        this.marginLeft = marginLeft;
-    }
+	public Integer getMarginRight()
+	{
+		return marginRight;
+	}
 
-    public Integer getMarginRight()
-    {
-        return marginRight;
-    }
+	public void setMarginRight(Integer marginRight)
+	{
+		this.marginRight = marginRight;
+	}
 
-    public void setMarginRight(Integer marginRight)
-    {
-        this.marginRight = marginRight;
-    }
+	public Integer getMarginTop()
+	{
+		return marginTop;
+	}
 
-    public Integer getMarginTop()
-    {
-        return marginTop;
-    }
+	public void setMarginTop(Integer marginTop)
+	{
+		this.marginTop = marginTop;
+	}
 
-    public void setMarginTop(Integer marginTop)
-    {
-        this.marginTop = marginTop;
-    }
+	public Integer getMarginBottom()
+	{
+		return marginBottom;
+	}
 
-    public Integer getMarginBottom()
-    {
-        return marginBottom;
-    }
+	public void setMarginBottom(Integer marginBottom)
+	{
+		this.marginBottom = marginBottom;
+	}
 
-    public void setMarginBottom(Integer marginBottom)
-    {
-        this.marginBottom = marginBottom;
-    }
+	public String getBackgroundColour()
+	{
+		return backgroundColour;
+	}
 
-    public String getBackgroundColour()
-    {
-        return backgroundColour;
-    }
-
-    public void setBackgroundColour(ColourHex backgroundColour)
-    {
-        this.backgroundColour = backgroundColour.getValue();
-    }
+	public void setBackgroundColour(ColourHex backgroundColour)
+	{
+		this.backgroundColour = backgroundColour.getValue();
+	}
 
 }

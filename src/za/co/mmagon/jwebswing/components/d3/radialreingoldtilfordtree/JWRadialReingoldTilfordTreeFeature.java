@@ -23,53 +23,90 @@ import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.*;
 /**
  * The implementation of the Radial ComponentFeatureBase
  * <p>
+ *
  * @author Marc Magon
- * @since 29 Aug 2015
  * @version 1.0
+ * @since 29 Aug 2015
  */
 public class JWRadialReingoldTilfordTreeFeature extends Feature<JWReingoldTilfordTreeOptions, JWRadialReingoldTilfordTreeFeature>
 {
 
-    private static final long serialVersionUID = 1L;
-    private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
-    private final JWRadialReingoldTilfordTree myTree;
+	private static final long serialVersionUID = 1L;
+	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
+	private final JWRadialReingoldTilfordTree myTree;
 
-    public JWRadialReingoldTilfordTreeFeature(JWRadialReingoldTilfordTree tree)
-    {
-        super("JWRadialReingoldTilfordTreeFeature");
-        this.myTree = tree;
-        getJavascriptReferences().add(D3JavascriptReferencePool.D3DrawingLibrary.getReference());
-        getJavascriptReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getJavaScriptReference());
-        getCssReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getCssReference());
-    }
+	public JWRadialReingoldTilfordTreeFeature(JWRadialReingoldTilfordTree tree)
+	{
+		super("JWRadialReingoldTilfordTreeFeature");
+		this.myTree = tree;
+		getJavascriptReferences().add(D3JavascriptReferencePool.D3DrawingLibrary.getReference());
+		getJavascriptReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getJavaScriptReference());
+		getCssReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getCssReference());
+	}
 
-    @Override
-    public void assignFunctionsToComponent()
-    {
+	@Override
+	public void assignFunctionsToComponent()
+	{
 
-        addQuery(myTree.getJQueryID() + "radialTree(" + getOptions() + ");");
+		addQuery(myTree.getJQueryID() + "radialTree(" + getOptions() + ");");
 
-    }
+	}
 
-    /**
-     * Gets the options for this set
-     * <p>
-     * @return
-     */
-    @Override
-    public JWReingoldTilfordTreeOptions getOptions()
-    {
-        return options;
-    }
+	/**
+	 * Gets the options for this set
+	 * <p>
+	 *
+	 * @return
+	 */
+	@Override
+	public JWReingoldTilfordTreeOptions getOptions()
+	{
+		return options;
+	}
 
-    /**
-     * Set to a new round of data
-     * <p>
-     * @param options
-     */
-    @Override
-    public void setOptions(JWReingoldTilfordTreeOptions options)
-    {
-        this.options = options;
-    }
+	/**
+	 * Set to a new round of data
+	 * <p>
+	 *
+	 * @param options
+	 */
+	@Override
+	public void setOptions(JWReingoldTilfordTreeOptions options)
+	{
+		this.options = options;
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (this == o)
+		{
+			return true;
+		}
+		if (o == null || getClass() != o.getClass())
+		{
+			return false;
+		}
+		if (!super.equals(o))
+		{
+			return false;
+		}
+
+		JWRadialReingoldTilfordTreeFeature that = (JWRadialReingoldTilfordTreeFeature) o;
+
+		if (!getOptions().equals(that.getOptions()))
+		{
+			return false;
+		}
+		return myTree.equals(that.myTree);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		int result = super.hashCode();
+		result = 31 * result + getOptions().hashCode();
+		result = 31 * result + myTree.hashCode();
+		return result;
+	}
 }

@@ -34,16 +34,12 @@ public enum JQD3ReferencePool implements ReferencePool
     ReingoldTilfodTree(new JavascriptReference("ReingoldTilfordTree", 1.0, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.js"),
             new CSSReference("ReingoldTilfordTreeCSS", 4.6, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.css")),;
 
-    ;
-    private JQD3ReferencePool()
-    {
-    }
-
     private JavascriptReference javaScriptReference;
     private CSSReference cssReference;
 
     private JQD3ReferencePool(JavascriptReference javaScriptReference, CSSReference cssReference)
     {
+    	this.javaScriptReference = javaScriptReference;
         this.cssReference = cssReference;
         this.cssReference.setPriority(RequirementsPriority.First);
     }
