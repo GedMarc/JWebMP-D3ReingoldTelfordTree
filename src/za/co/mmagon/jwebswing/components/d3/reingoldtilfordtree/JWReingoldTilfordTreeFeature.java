@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,6 +19,8 @@ package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
 import za.co.mmagon.jwebswing.*;
 import za.co.mmagon.jwebswing.components.d3.*;
 import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
+
+import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
 /**
  * The implementation of the Radial ComponentFeatureBase
@@ -47,7 +49,7 @@ public class JWReingoldTilfordTreeFeature extends Feature<JWReingoldTilfordTreeO
 	@Override
 	public void assignFunctionsToComponent()
 	{
-		addQuery(myTree.getJQueryID() + "reingoldTree(" + getOptions() + ");");
+		addQuery(myTree.getJQueryID() + "reingoldTree(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON);
 	}
 
 	/**
