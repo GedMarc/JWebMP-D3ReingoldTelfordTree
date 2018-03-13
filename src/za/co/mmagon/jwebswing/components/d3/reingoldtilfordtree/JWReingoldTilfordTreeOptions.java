@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,9 +16,10 @@
  */
 package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
 
-import com.fasterxml.jackson.annotation.*;
-import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.D3RadialTreeItem;
+import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * The JavaScript part for the radial Reingold-Tilford tree
@@ -42,7 +43,7 @@ public class JWReingoldTilfordTreeOptions extends JavaScriptPart
     /**
      * The root node of the tree
      */
-    private JWRadialTreeItem data;
+    private D3RadialTreeItem data;
     private Integer marginLeft;
     private Integer marginRight;
     private Integer marginTop;
@@ -97,11 +98,11 @@ public class JWReingoldTilfordTreeOptions extends JavaScriptPart
      * <p>
      * @return
      */
-    public JWRadialTreeItem getData()
+    public D3RadialTreeItem getData()
     {
         if (data == null)
         {
-            data = new JWRadialTreeItem();
+            data = new D3RadialTreeItem();
         }
         return data;
     }
@@ -111,7 +112,7 @@ public class JWReingoldTilfordTreeOptions extends JavaScriptPart
      * <p>
      * @param data
      */
-    public void setData(JWRadialTreeItem data)
+    public void setData(D3RadialTreeItem data)
     {
         this.data = data;
     }

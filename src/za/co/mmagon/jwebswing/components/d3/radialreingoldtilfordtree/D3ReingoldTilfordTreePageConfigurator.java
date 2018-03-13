@@ -21,34 +21,51 @@ import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
 
 /**
- *
  * @author GedMarc
  */
 @PluginInformation(pluginName = "D3 Reingold Tilford Tree",
-                   pluginUniqueName = "d3-reingold-tilford-tree",
-                   pluginDescription = "D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation. ",
-                   pluginVersion = "1.4.1",
-                   pluginDependancyUniqueIDs = "jquery,d3",
-                   pluginCategories = "d3, graphing, reports, graphs",
-                   pluginSubtitle = "Create stunning graphs using the D3 toolkit.",
-                   pluginGitUrl = "http://txt2vz.appspot.com/",
-                   pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree",
-                   pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree/wiki",
-                   pluginOriginalHomepage = "http://txt2vz.appspot.com/",
-                   pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/D3ReingoldTelfordTree.jar/download",
-                   pluginIconUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
-                   pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
-                   pluginLastUpdatedDate = "2017/03/04"
-)
-public class D3ReingoldTilfordTreePageConfigurator extends PageConfigurator
+		pluginUniqueName = "d3-reingold-tilford-tree",
+		pluginDescription = "D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation. ",
+		pluginVersion = "1.4.1",
+		pluginDependancyUniqueIDs = "jquery,d3",
+		pluginCategories = "d3, graphing, reports, graphs",
+		pluginSubtitle = "Create stunning graphs using the D3 toolkit.",
+		pluginGitUrl = "http://txt2vz.appspot.com/",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree/wiki",
+		pluginOriginalHomepage = "http://txt2vz.appspot.com/",
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/D3ReingoldTelfordTree.jar/download",
+		pluginIconUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
+		pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
+		pluginLastUpdatedDate = "2017/03/04")
+public class D3ReingoldTilfordTreePageConfigurator
+		extends PageConfigurator
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
+	public static boolean IS_RADIAL = false;
 
-    @Override
-    public Page configure(Page page)
-    {
-        return page;
-    }
+	@Override
+	public Page configure(Page page)
+	{
+		if (!page.isConfigured())
+		{
+			if (!IS_RADIAL)
+			{
+				page.getBody()
+				    .addJavaScriptReference(D3RadialTreesReferencePool.ReingoldTilfodTree.getJavaScriptReference());
+				page.getBody()
+				    .addCssReference(D3RadialTreesReferencePool.ReingoldTilfodTree.getCssReference());
+			}
+			else
+			{
+				page.getBody()
+				    .addJavaScriptReference(D3RadialTreesReferencePool.RadialReingoldTilfodTree.getJavaScriptReference());
+				page.getBody()
+				    .addCssReference(D3RadialTreesReferencePool.RadialReingoldTilfodTree.getCssReference());
+			}
+		}
+		return page;
+	}
 
 }

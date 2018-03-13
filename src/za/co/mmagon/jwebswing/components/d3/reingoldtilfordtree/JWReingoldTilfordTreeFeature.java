@@ -16,9 +16,7 @@
  */
 package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.*;
-import za.co.mmagon.jwebswing.components.d3.*;
-import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.*;
+import za.co.mmagon.jwebswing.Feature;
 
 import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
@@ -30,20 +28,18 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRAC
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JWReingoldTilfordTreeFeature extends Feature<JWReingoldTilfordTreeOptions, JWReingoldTilfordTreeFeature>
+public class JWReingoldTilfordTreeFeature
+		extends Feature<JWReingoldTilfordTreeOptions, JWReingoldTilfordTreeFeature>
 {
 
 	private static final long serialVersionUID = 1L;
-	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 	private final JWReingoldTilfordTree myTree;
+	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 
 	public JWReingoldTilfordTreeFeature(JWReingoldTilfordTree tree)
 	{
 		super("JWReingoldTilfordTreeFeature");
-		this.myTree = tree;
-		getJavascriptReferences().add(D3JavascriptReferencePool.D3DrawingLibrary.getReference());
-		getJavascriptReferences().add(JQD3ReferencePool.ReingoldTilfodTree.getJavaScriptReference());
-		getCssReferences().add(JQD3ReferencePool.ReingoldTilfodTree.getCssReference());
+		myTree = tree;
 	}
 
 	@Override
@@ -83,34 +79,12 @@ public class JWReingoldTilfordTreeFeature extends Feature<JWReingoldTilfordTreeO
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JWReingoldTilfordTreeFeature that = (JWReingoldTilfordTreeFeature) o;
-
-		if (!getOptions().equals(that.getOptions()))
-		{
-			return false;
-		}
-		return myTree != null ? myTree.equals(that.myTree) : that.myTree == null;
+		return super.equals(o);
 	}
 
 	@Override
 	public int hashCode()
 	{
-		int result = super.hashCode();
-		result = 31 * result + getOptions().hashCode();
-		result = 31 * result + (myTree != null ? myTree.hashCode() : 0);
-		return result;
+		return super.hashCode();
 	}
 }

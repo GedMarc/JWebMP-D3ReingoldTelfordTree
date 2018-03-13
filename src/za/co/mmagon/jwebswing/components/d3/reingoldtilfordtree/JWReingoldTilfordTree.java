@@ -22,64 +22,50 @@ import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 /**
  * An interactive version of the Reingold–Tilford Tree
  * <p>
- * @author Marc Magon
+ *
  * @param <J>
  *
- * @since 29 Aug 2015
+ * @author Marc Magon
  * @version 1.0
+ * @since 29 Aug 2015
  */
-@ComponentInformation(name = "Reingold-Tilford Tree", description = "A D3 generated dynamically placed tree based on values and space available", url = "https://sourceforge.net/p/jwebswing/jqd3/")
-public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>> extends Div
+@ComponentInformation(name = "Reingold-Tilford Tree",
+		description = "A D3 generated dynamically placed tree based on values and space available",
+		url = "https://sourceforge.net/p/jwebswing/jqd3/")
+public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>>
+		extends Div
 {
 
-    private static final long serialVersionUID = 1L;
-    private JWReingoldTilfordTreeFeature feature;
+	private static final long serialVersionUID = 1L;
+	private JWReingoldTilfordTreeFeature feature;
 
-    public JWReingoldTilfordTree()
-    {
-        feature = new JWReingoldTilfordTreeFeature(this);
-        addFeature(feature);
+	public JWReingoldTilfordTree()
+	{
+		feature = new JWReingoldTilfordTreeFeature(this);
+		addFeature(feature);
 
-    }
+	}
+
 	@Override
-    public JWReingoldTilfordTreeOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
+	public JWReingoldTilfordTreeOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
 
-    public JWReingoldTilfordTreeFeature getFeature()
-    {
-        return feature;
-    }
+	public JWReingoldTilfordTreeFeature getFeature()
+	{
+		return feature;
+	}
 
-    public void setFeature(JWReingoldTilfordTreeFeature feature)
-    {
-        this.feature = feature;
-    }
+	public void setFeature(JWReingoldTilfordTreeFeature feature)
+	{
+		this.feature = feature;
+	}
 
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JWReingoldTilfordTree<?> that = (JWReingoldTilfordTree<?>) o;
-
-		if (!getFeature().equals(that.getFeature()))
-		{
-			return false;
-		}
-		return getOptions().equals(that.getOptions());
+		return super.equals(o);
 	}
 
 	@Override

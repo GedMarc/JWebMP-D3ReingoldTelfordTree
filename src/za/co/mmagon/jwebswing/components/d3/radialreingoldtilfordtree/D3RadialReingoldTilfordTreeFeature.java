@@ -16,9 +16,8 @@
  */
 package za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.*;
-import za.co.mmagon.jwebswing.components.d3.*;
-import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.*;
+import za.co.mmagon.jwebswing.Feature;
+import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 
 import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
@@ -30,20 +29,24 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRAC
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JWRadialReingoldTilfordTreeFeature extends Feature<JWReingoldTilfordTreeOptions, JWRadialReingoldTilfordTreeFeature>
+public class D3RadialReingoldTilfordTreeFeature
+		extends Feature<JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
 {
 
 	private static final long serialVersionUID = 1L;
+	private final D3RadialReingoldTilfordTree myTree;
 	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
-	private final JWRadialReingoldTilfordTree myTree;
 
-	public JWRadialReingoldTilfordTreeFeature(JWRadialReingoldTilfordTree tree)
+	public D3RadialReingoldTilfordTreeFeature(D3RadialReingoldTilfordTree tree)
 	{
 		super("JWRadialReingoldTilfordTreeFeature");
-		this.myTree = tree;
-		getJavascriptReferences().add(D3JavascriptReferencePool.D3DrawingLibrary.getReference());
-		getJavascriptReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getJavaScriptReference());
-		getCssReferences().add(JQD3ReferencePool.RadialReingoldTilfodTree.getCssReference());
+		myTree = tree;
+	}
+
+	@Override
+	public String toString()
+	{
+		return super.toString();
 	}
 
 	@Override
@@ -81,34 +84,8 @@ public class JWRadialReingoldTilfordTreeFeature extends Feature<JWReingoldTilfor
 	@Override
 	public boolean equals(Object o)
 	{
-		if (this == o)
-		{
-			return true;
-		}
-		if (o == null || getClass() != o.getClass())
-		{
-			return false;
-		}
-		if (!super.equals(o))
-		{
-			return false;
-		}
-
-		JWRadialReingoldTilfordTreeFeature that = (JWRadialReingoldTilfordTreeFeature) o;
-
-		if (!getOptions().equals(that.getOptions()))
-		{
-			return false;
-		}
-		return myTree.equals(that.myTree);
+		return super.equals(o);
 	}
 
-	@Override
-	public int hashCode()
-	{
-		int result = super.hashCode();
-		result = 31 * result + getOptions().hashCode();
-		result = 31 * result + myTree.hashCode();
-		return result;
-	}
+
 }

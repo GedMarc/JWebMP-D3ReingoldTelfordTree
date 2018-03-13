@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -29,13 +29,14 @@ import java.util.List;
  * @since 30 Aug 2015
  * @version 1.0
  */
-public class JWRadialTreeItem extends JavaScriptPart
+public class D3RadialTreeItem
+		extends JavaScriptPart
 {
 
     private String name;
-    private List<JWRadialTreeItem> children;
+    private List<D3RadialTreeItem> children;
 
-    public JWRadialTreeItem()
+    public D3RadialTreeItem()
     {
         this("");
     }
@@ -45,7 +46,7 @@ public class JWRadialTreeItem extends JavaScriptPart
      * <p>
      * @param name
      */
-    public JWRadialTreeItem(String name)
+    public D3RadialTreeItem(String name)
     {
         this.name = name;
     }
@@ -75,7 +76,7 @@ public class JWRadialTreeItem extends JavaScriptPart
      * <p>
      * @return
      */
-    public List<JWRadialTreeItem> getChildren()
+    public List<D3RadialTreeItem> getChildren()
     {
         if (children == null)
         {
@@ -89,7 +90,7 @@ public class JWRadialTreeItem extends JavaScriptPart
      * <p>
      * @param children
      */
-    public void setChildren(List<JWRadialTreeItem> children)
+    public void setChildren(List<D3RadialTreeItem> children)
     {
         this.children = children;
     }
@@ -100,14 +101,14 @@ public class JWRadialTreeItem extends JavaScriptPart
         return JavascriptPartType.JSON;
     }
 
-    public JWRadialTreeItem add(String item)
+    public D3RadialTreeItem add(String item)
     {
-        JWRadialTreeItem newItem = new JWRadialTreeItem(item);
+        D3RadialTreeItem newItem = new D3RadialTreeItem(item);
         getChildren().add(newItem);
         return newItem;
     }
 
-    public JWRadialTreeItem add(JWRadialTreeItem item)
+    public D3RadialTreeItem add(D3RadialTreeItem item)
     {
         getChildren().add(item);
         return item;

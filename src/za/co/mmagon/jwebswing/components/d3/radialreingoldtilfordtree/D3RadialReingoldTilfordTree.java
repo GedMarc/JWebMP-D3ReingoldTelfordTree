@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,11 +16,11 @@
  */
 package za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.base.html.*;
-import za.co.mmagon.jwebswing.base.html.attributes.*;
-import za.co.mmagon.jwebswing.base.html.interfaces.children.*;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.*;
-import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.*;
+import za.co.mmagon.jwebswing.base.html.Div;
+import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
+import za.co.mmagon.jwebswing.base.html.interfaces.children.NoChildren;
+import za.co.mmagon.jwebswing.base.html.interfaces.events.NoEvents;
+import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 
 /**
@@ -32,41 +32,41 @@ import za.co.mmagon.jwebswing.plugins.ComponentInformation;
  * @version 1.0
  */
 @ComponentInformation(name = "Radial Reingold-Tilford Tree", description = "A D3 generated dynamically placed tree based on values and space available in a radial fashion", url = "https://sourceforge.net/p/jwebswing/jqd3/")
-public class JWRadialReingoldTilfordTree
-        extends Div<NoChildren, NoAttributes, JWRadialReingoldTilfordTreeFeature, NoEvents, JWRadialReingoldTilfordTree>
+public class D3RadialReingoldTilfordTree
+        extends Div<NoChildren, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
 {
 
     private static final long serialVersionUID = 1L;
-    private JWRadialReingoldTilfordTreeFeature feature;
+    private D3RadialReingoldTilfordTreeFeature feature;
 
     /**
      * Constructs a new Tilford Tree
      */
-    public JWRadialReingoldTilfordTree()
+    public D3RadialReingoldTilfordTree()
     {
         super();
 
         addFeature(getFeature());
     }
 
-    @Override
-    public JWReingoldTilfordTreeOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
-
-    public JWRadialReingoldTilfordTreeFeature getFeature()
+    public D3RadialReingoldTilfordTreeFeature getFeature()
     {
         if (feature == null)
         {
-            feature = new JWRadialReingoldTilfordTreeFeature(this);
+            feature = new D3RadialReingoldTilfordTreeFeature(this);
         }
         return feature;
     }
 
-    public void setFeature(JWRadialReingoldTilfordTreeFeature feature)
+    public void setFeature(D3RadialReingoldTilfordTreeFeature feature)
     {
         this.feature = feature;
+    }
+
+    @Override
+    public JWReingoldTilfordTreeOptions getOptions()
+    {
+        return getFeature().getOptions();
     }
 
 	@Override
