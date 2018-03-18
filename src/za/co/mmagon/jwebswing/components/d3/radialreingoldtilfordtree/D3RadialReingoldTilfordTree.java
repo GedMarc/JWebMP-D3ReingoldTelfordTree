@@ -27,47 +27,50 @@ import za.co.mmagon.jwebswing.plugins.ComponentInformation;
  * The implementation of the radial Reingold Tilford Tree.
  * <p>
  * <p>
+ *
  * @author Marc Magon
- * @since 29 Aug 2015
  * @version 1.0
+ * @since 29 Aug 2015
  */
-@ComponentInformation(name = "Radial Reingold-Tilford Tree", description = "A D3 generated dynamically placed tree based on values and space available in a radial fashion", url = "https://sourceforge.net/p/jwebswing/jqd3/")
+@ComponentInformation(name = "Radial Reingold-Tilford Tree",
+		description = "A D3 generated dynamically placed tree based on values and space available in a radial fashion",
+		url = "https://sourceforge.net/p/jwebswing/jqd3/")
 public class D3RadialReingoldTilfordTree
-        extends Div<NoChildren, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
+		extends Div<NoChildren, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
 {
 
-    private static final long serialVersionUID = 1L;
-    private D3RadialReingoldTilfordTreeFeature feature;
+	private static final long serialVersionUID = 1L;
+	private D3RadialReingoldTilfordTreeFeature feature;
 
-    /**
-     * Constructs a new Tilford Tree
-     */
-    public D3RadialReingoldTilfordTree()
-    {
-        super();
+	/**
+	 * Constructs a new Tilford Tree
+	 */
+	public D3RadialReingoldTilfordTree()
+	{
+		super();
 
-        addFeature(getFeature());
-    }
+		addFeature(getFeature());
+	}
 
-    public D3RadialReingoldTilfordTreeFeature getFeature()
-    {
-        if (feature == null)
-        {
-            feature = new D3RadialReingoldTilfordTreeFeature(this);
-        }
-        return feature;
-    }
+	public D3RadialReingoldTilfordTreeFeature getFeature()
+	{
+		if (feature == null)
+		{
+			feature = new D3RadialReingoldTilfordTreeFeature(this);
+		}
+		return feature;
+	}
 
-    public void setFeature(D3RadialReingoldTilfordTreeFeature feature)
-    {
-        this.feature = feature;
-    }
+	public void setFeature(D3RadialReingoldTilfordTreeFeature feature)
+	{
+		this.feature = feature;
+	}
 
-    @Override
-    public JWReingoldTilfordTreeOptions getOptions()
-    {
-        return getFeature().getOptions();
-    }
+	@Override
+	public JWReingoldTilfordTreeOptions getOptions()
+	{
+		return getFeature().getOptions();
+	}
 
 	@Override
 	public boolean equals(Object o)

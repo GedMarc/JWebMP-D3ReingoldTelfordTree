@@ -30,8 +30,10 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
 public enum D3RadialTreesReferencePool
 		implements ReferencePool
 {
-	RadialReingoldTilfodTree(new JavascriptReference("RadialReingoldTilfordTree", 1.0, "bower_components/jqd3/radial-reingold-tilford-tree/radialReingoldTilfordTree.js"), new CSSReference("RadialReingoldTilfordTreeCSS", 4.6, "bower_components/jqd3/radial-reingold-tilford-tree/radialReingoldTilfordTree.css")),
-	ReingoldTilfodTree(new JavascriptReference("ReingoldTilfordTree", 1.0, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.js"), new CSSReference("ReingoldTilfordTreeCSS", 4.6, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.css")),;
+	RadialReingoldTilfodTree(new JavascriptReference("RadialReingoldTilfordTree", 1.0, "bower_components/jqd3/radial-reingold-tilford-tree/radialReingoldTilfordTree.js"),
+	                         new CSSReference("RadialReingoldTilfordTreeCSS", 4.6, "bower_components/jqd3/radial-reingold-tilford-tree/radialReingoldTilfordTree.css")),
+	ReingoldTilfodTree(new JavascriptReference("ReingoldTilfordTree", 1.0, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.js"),
+	                   new CSSReference("ReingoldTilfordTreeCSS", 4.6, "bower_components/jqd3/reingold-tilford-tree/reingoldTilfordTree.css")),;
 
 	private JavascriptReference javaScriptReference;
 	private CSSReference cssReference;
