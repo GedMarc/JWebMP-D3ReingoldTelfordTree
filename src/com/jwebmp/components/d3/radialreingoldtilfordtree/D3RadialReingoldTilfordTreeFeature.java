@@ -14,11 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
+package com.jwebmp.components.d3.radialreingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.Feature;
+import com.jwebmp.Feature;
+import com.jwebmp.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 
-import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
 /**
  * The implementation of the Radial ComponentFeatureBase
@@ -28,24 +29,30 @@ import static za.co.mmagon.jwebswing.utilities.StaticStrings.STRING_CLOSING_BRAC
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JWReingoldTilfordTreeFeature
-		extends Feature<JWReingoldTilfordTreeOptions, JWReingoldTilfordTreeFeature>
+public class D3RadialReingoldTilfordTreeFeature
+		extends Feature<JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
 {
 
 	private static final long serialVersionUID = 1L;
-	private final JWReingoldTilfordTree myTree;
+	private final D3RadialReingoldTilfordTree myTree;
 	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 
-	public JWReingoldTilfordTreeFeature(JWReingoldTilfordTree tree)
+	public D3RadialReingoldTilfordTreeFeature(D3RadialReingoldTilfordTree tree)
 	{
-		super("JWReingoldTilfordTreeFeature");
+		super("JWRadialReingoldTilfordTreeFeature");
 		myTree = tree;
 	}
 
 	@Override
-	public void assignFunctionsToComponent()
+	public String toString()
 	{
-		addQuery(myTree.getJQueryID() + "reingoldTree(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON);
+		return super.toString();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 
 	/**
@@ -57,10 +64,6 @@ public class JWReingoldTilfordTreeFeature
 	@Override
 	public JWReingoldTilfordTreeOptions getOptions()
 	{
-		if (options == null)
-		{
-			options = new JWReingoldTilfordTreeOptions();
-		}
 		return options;
 	}
 
@@ -77,14 +80,12 @@ public class JWReingoldTilfordTreeFeature
 	}
 
 	@Override
-	public boolean equals(Object o)
+	public void assignFunctionsToComponent()
 	{
-		return super.equals(o);
+
+		addQuery(myTree.getJQueryID() + "radialTree(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON);
+
 	}
 
-	@Override
-	public int hashCode()
-	{
-		return super.hashCode();
-	}
+
 }

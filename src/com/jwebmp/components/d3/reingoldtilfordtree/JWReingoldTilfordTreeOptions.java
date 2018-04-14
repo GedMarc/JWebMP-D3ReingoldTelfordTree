@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
+package com.jwebmp.components.d3.reingoldtilfordtree;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree.D3RadialTreeItem;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
+import com.jwebmp.components.d3.radialreingoldtilfordtree.D3RadialTreeItem;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * The JavaScript part for the radial Reingold-Tilford tree

@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -14,86 +14,87 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
+package com.jwebmp.components.d3.reingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.htmlbuilder.css.colours.ColourHex;
-import za.co.mmagon.jwebswing.htmlbuilder.css.measurement.MeasurementCSSImpl;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.htmlbuilder.css.colours.ColourHex;
+import com.jwebmp.htmlbuilder.css.fonts.FontFamilies;
+import com.jwebmp.htmlbuilder.css.fonts.FontWeights;
+import com.jwebmp.htmlbuilder.css.measurement.MeasurementCSSImpl;
+import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 06 Sep 2015
  */
-public class JWReingoldTilfordTreeNodeOptions extends JavaScriptPart
+public class JWReingoldTilfordTreeTextOptions extends JavaScriptPart
 {
 
 	private static final long serialVersionUID = 1L;
-	private String markerType;
-	private Double markerSize;
-	private String fill;
-	private String stroke;
-	private String strokeWidth;
+	private MeasurementCSSImpl fontSize;
+	private FontFamilies fontName;
+	private FontWeights fontWeight;
+	private String fontColour;
+	private Double fillOpacity;
 	private Integer marginLeft;
 	private Integer marginRight;
 	private Integer marginTop;
 	private Integer marginBottom;
-	private Double fillOpacity;
-	private Double strokeOpacity;
+	private String backgroundColour;
 
-	public JWReingoldTilfordTreeNodeOptions()
+	public JWReingoldTilfordTreeTextOptions()
 	{
-		//Nothing needed
+		//No config needed
 	}
 
-	public String getMarkerType()
+	public MeasurementCSSImpl getFontSize()
 	{
-		return markerType;
+		return fontSize;
 	}
 
-	public void setMarkerType(String markerType)
+	public void setFontSize(MeasurementCSSImpl fontSize)
 	{
-		this.markerType = markerType;
+		this.fontSize = fontSize;
 	}
 
-	public Double getMarkerSize()
+	public FontFamilies getFontName()
 	{
-		return markerSize;
+		return fontName;
 	}
 
-	public void setMarkerSize(Double markerSize)
+	public void setFontName(FontFamilies fontName)
 	{
-		this.markerSize = markerSize;
+		this.fontName = fontName;
 	}
 
-	public String getFill()
+	public FontWeights getFontWeight()
 	{
-		return fill;
+		return fontWeight;
 	}
 
-	public void setFill(ColourHex fill)
+	public void setFontWeight(FontWeights fontWeight)
 	{
-		this.fill = fill.getValue();
+		this.fontWeight = fontWeight;
 	}
 
-	public String getStroke()
+	public String getFontColour()
 	{
-		return stroke;
+		return fontColour;
 	}
 
-	public void setStroke(ColourHex stroke)
+	public void setFontColour(ColourHex fontColour)
 	{
-		this.stroke = stroke.getValue();
+		this.fontColour = fontColour.getValue();
 	}
 
-	public String getStrokeWidth()
+	public Double getFillOpacity()
 	{
-		return strokeWidth;
+		return fillOpacity;
 	}
 
-	public void setStrokeWidth(MeasurementCSSImpl strokeWidth)
+	public void setFillOpacity(Double fillOpacity)
 	{
-		this.strokeWidth = strokeWidth.toString(true).replace("'", "");
+		this.fillOpacity = fillOpacity;
 	}
 
 	public Integer getMarginLeft()
@@ -136,24 +137,14 @@ public class JWReingoldTilfordTreeNodeOptions extends JavaScriptPart
 		this.marginBottom = marginBottom;
 	}
 
-	public Double getFillOpacity()
+	public String getBackgroundColour()
 	{
-		return fillOpacity;
+		return backgroundColour;
 	}
 
-	public void setFillOpacity(Double fillOpacity)
+	public void setBackgroundColour(ColourHex backgroundColour)
 	{
-		this.fillOpacity = fillOpacity;
-	}
-
-	public Double getStrokeOpacity()
-	{
-		return strokeOpacity;
-	}
-
-	public void setStrokeOpacity(Double strokeOpacity)
-	{
-		this.strokeOpacity = strokeOpacity;
+		this.backgroundColour = backgroundColour.getValue();
 	}
 
 }

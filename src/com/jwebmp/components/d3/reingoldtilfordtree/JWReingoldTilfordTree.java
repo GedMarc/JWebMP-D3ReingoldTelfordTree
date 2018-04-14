@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree;
+package com.jwebmp.components.d3.reingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.base.html.Div;
+import com.jwebmp.plugins.ComponentInformation;
 
 /**
  * An interactive version of the Reingold–Tilford Tree

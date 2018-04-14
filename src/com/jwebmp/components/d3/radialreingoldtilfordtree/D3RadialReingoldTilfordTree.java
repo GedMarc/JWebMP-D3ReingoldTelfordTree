@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.components.d3.radialreingoldtilfordtree;
+package com.jwebmp.components.d3.radialreingoldtilfordtree;
 
-import za.co.mmagon.jwebswing.base.html.Div;
-import za.co.mmagon.jwebswing.base.html.attributes.NoAttributes;
-import za.co.mmagon.jwebswing.base.html.interfaces.children.NoChildren;
-import za.co.mmagon.jwebswing.base.html.interfaces.events.NoEvents;
-import za.co.mmagon.jwebswing.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
-import za.co.mmagon.jwebswing.plugins.ComponentInformation;
+import com.jwebmp.base.html.Div;
+import com.jwebmp.base.html.attributes.NoAttributes;
+import com.jwebmp.base.html.interfaces.children.NoChildren;
+import com.jwebmp.base.html.interfaces.events.NoEvents;
+import com.jwebmp.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
+import com.jwebmp.plugins.ComponentInformation;
 
 /**
  * The implementation of the radial Reingold Tilford Tree.
