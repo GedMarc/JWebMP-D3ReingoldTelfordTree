@@ -43,14 +43,24 @@ public class D3ReingoldTilfordTreePageConfigurator
 {
 
 	private static final long serialVersionUID = 1L;
-	public static boolean IS_RADIAL = false;
+	private static boolean ISRADIAL = false;
+
+	public static boolean isISRADIAL()
+	{
+		return ISRADIAL;
+	}
+
+	public static void setISRADIAL(boolean ISRADIAL)
+	{
+		D3ReingoldTilfordTreePageConfigurator.ISRADIAL = ISRADIAL;
+	}
 
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			if (!IS_RADIAL)
+			if (!ISRADIAL)
 			{
 				page.getBody()
 				    .addJavaScriptReference(D3RadialTreesReferencePool.ReingoldTilfodTree.getJavaScriptReference());
@@ -67,5 +77,4 @@ public class D3ReingoldTilfordTreePageConfigurator
 		}
 		return page;
 	}
-
 }
