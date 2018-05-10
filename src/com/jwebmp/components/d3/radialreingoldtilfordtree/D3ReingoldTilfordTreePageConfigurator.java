@@ -50,7 +50,7 @@ public class D3ReingoldTilfordTreePageConfigurator
 		return ISRADIAL;
 	}
 
-	public static void setISRADIAL(boolean ISRADIAL)
+	public static void setIsRadial(boolean ISRADIAL)
 	{
 		D3ReingoldTilfordTreePageConfigurator.ISRADIAL = ISRADIAL;
 	}
