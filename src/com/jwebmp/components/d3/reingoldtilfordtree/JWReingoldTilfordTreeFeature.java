@@ -18,6 +18,8 @@ package com.jwebmp.components.d3.reingoldtilfordtree;
 
 import com.jwebmp.Feature;
 
+import javax.validation.constraints.NotNull;
+
 import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
 
 /**
@@ -28,8 +30,8 @@ import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLO
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JWReingoldTilfordTreeFeature
-		extends Feature<JWReingoldTilfordTreeOptions, JWReingoldTilfordTreeFeature>
+public class JWReingoldTilfordTreeFeature<J extends JWReingoldTilfordTreeFeature<J>>
+		extends Feature<JWReingoldTilfordTreeOptions, J>
 {
 
 	private static final long serialVersionUID = 1L;
@@ -77,9 +79,12 @@ public class JWReingoldTilfordTreeFeature
 	 * @param options
 	 */
 	@Override
-	public void setOptions(JWReingoldTilfordTreeOptions options)
+	@SuppressWarnings("unchecked")
+	@NotNull
+	public J setOptions(JWReingoldTilfordTreeOptions options)
 	{
 		this.options = options;
+		return (J) this;
 	}
 
 	@Override

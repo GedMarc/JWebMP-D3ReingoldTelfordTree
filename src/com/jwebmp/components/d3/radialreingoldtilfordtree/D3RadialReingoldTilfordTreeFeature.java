@@ -73,18 +73,6 @@ public class D3RadialReingoldTilfordTreeFeature
 		return options;
 	}
 
-	/**
-	 * Set to a new round of data
-	 * <p>
-	 *
-	 * @param options
-	 */
-	@Override
-	public void setOptions(JWReingoldTilfordTreeOptions options)
-	{
-		this.options = options;
-	}
-
 	@Override
 	public void assignFunctionsToComponent()
 	{
