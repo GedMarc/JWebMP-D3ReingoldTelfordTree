@@ -18,7 +18,7 @@ package com.jwebmp.components.d3.radialreingoldtilfordtree;
 
 import com.jwebmp.base.html.Div;
 import com.jwebmp.base.html.attributes.NoAttributes;
-import com.jwebmp.base.html.interfaces.children.NoChildren;
+import com.jwebmp.base.html.interfaces.GlobalChildren;
 import com.jwebmp.base.html.interfaces.events.NoEvents;
 import com.jwebmp.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 import com.jwebmp.plugins.ComponentInformation;
@@ -36,7 +36,7 @@ import com.jwebmp.plugins.ComponentInformation;
 		description = "A D3 generated dynamically placed tree based on values and space available in a radial fashion",
 		url = "https://sourceforge.net/p/jwebswing/jqd3/")
 public class D3RadialReingoldTilfordTree
-		extends Div<NoChildren, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
+		extends Div<GlobalChildren, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
 {
 
 	private static final long serialVersionUID = 1L;
