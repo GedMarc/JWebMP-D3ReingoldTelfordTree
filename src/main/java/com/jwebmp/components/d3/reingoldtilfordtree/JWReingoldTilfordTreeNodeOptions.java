@@ -25,7 +25,8 @@ import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
  * @version 1.0
  * @since 06 Sep 2015
  */
-public class JWReingoldTilfordTreeNodeOptions extends JavaScriptPart
+public class JWReingoldTilfordTreeNodeOptions
+		extends JavaScriptPart
 {
 
 	private static final long serialVersionUID = 1L;
@@ -93,7 +94,8 @@ public class JWReingoldTilfordTreeNodeOptions extends JavaScriptPart
 
 	public void setStrokeWidth(MeasurementCSSImpl strokeWidth)
 	{
-		this.strokeWidth = strokeWidth.toString(true).replace("'", "");
+		this.strokeWidth = strokeWidth.toString(true)
+		                              .replace("'", "");
 	}
 
 	public Integer getMarginLeft()

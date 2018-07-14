@@ -17,19 +17,19 @@
 package com.jwebmp.components.d3.reingoldtilfordtree;
 
 /**
- *
  * @author Marc Magon
- * @since 06 Sep 2015
  * @version 1.0
+ * @since 06 Sep 2015
  */
-public class JWReingoldTilfordTreeLinkOptions extends JWReingoldTilfordTreeNodeOptions
+public class JWReingoldTilfordTreeLinkOptions
+		extends JWReingoldTilfordTreeNodeOptions
 {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    public JWReingoldTilfordTreeLinkOptions()
-    {
+	public JWReingoldTilfordTreeLinkOptions()
+	{
 		//No configuration required
-    }
+	}
 
 }

@@ -27,7 +27,8 @@ import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
  * @version 1.0
  * @since 06 Sep 2015
  */
-public class JWReingoldTilfordTreeTextOptions extends JavaScriptPart
+public class JWReingoldTilfordTreeTextOptions
+		extends JavaScriptPart
 {
 
 	private static final long serialVersionUID = 1L;

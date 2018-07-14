@@ -14,13 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.d3.reingoldtilfordtree;
+package com.jwebmp.components.d3.radialreingoldtilfordtree;
 
 import com.jwebmp.Feature;
+import com.jwebmp.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 
-import javax.validation.constraints.NotNull;
-
-import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLON;
+import static com.jwebmp.utilities.StaticStrings.*;
 
 /**
  * The implementation of the Radial ComponentFeatureBase
@@ -30,18 +29,24 @@ import static com.jwebmp.utilities.StaticStrings.STRING_CLOSING_BRACKET_SEMICOLO
  * @version 1.0
  * @since 29 Aug 2015
  */
-public class JWReingoldTilfordTreeFeature<J extends JWReingoldTilfordTreeFeature<J>>
-		extends Feature<JWReingoldTilfordTreeOptions, J>
+public class D3RadialReingoldTilfordTreeFeature
+		extends Feature<JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
 {
 
 	private static final long serialVersionUID = 1L;
-	private final JWReingoldTilfordTree myTree;
+	private final D3RadialReingoldTilfordTree myTree;
 	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 
-	public JWReingoldTilfordTreeFeature(JWReingoldTilfordTree tree)
+	public D3RadialReingoldTilfordTreeFeature(D3RadialReingoldTilfordTree tree)
 	{
-		super("JWReingoldTilfordTreeFeature");
+		super("JWRadialReingoldTilfordTreeFeature");
 		myTree = tree;
+	}
+
+	@Override
+	public String toString()
+	{
+		return super.toString();
 	}
 
 	@Override
@@ -65,31 +70,15 @@ public class JWReingoldTilfordTreeFeature<J extends JWReingoldTilfordTreeFeature
 	@Override
 	public JWReingoldTilfordTreeOptions getOptions()
 	{
-		if (options == null)
-		{
-			options = new JWReingoldTilfordTreeOptions();
-		}
 		return options;
-	}
-
-	/**
-	 * Set to a new round of data
-	 * <p>
-	 *
-	 * @param options
-	 */
-	@Override
-	@SuppressWarnings("unchecked")
-	@NotNull
-	public J setOptions(JWReingoldTilfordTreeOptions options)
-	{
-		this.options = options;
-		return (J) this;
 	}
 
 	@Override
 	public void assignFunctionsToComponent()
 	{
-		addQuery(myTree.getJQueryID() + "reingoldTree(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON);
+
+		addQuery(myTree.getJQueryID() + "radialTree(" + getOptions() + STRING_CLOSING_BRACKET_SEMICOLON);
+
 	}
+
 }
