@@ -14,22 +14,4 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.d3.reingoldtilfordtree;
-
-/**
- * @author Marc Magon
- * @version 1.0
- * @since 06 Sep 2015
- */
-public class JWReingoldTilfordTreeLinkOptions
-		extends JWReingoldTilfordTreeNodeOptions
-{
-
-	private static final long serialVersionUID = 1L;
-
-	public JWReingoldTilfordTreeLinkOptions()
-	{
-		//No configuration required
-	}
-
-}
+package com.jwebmp.plugins.d3.reingoldtilfordtree;

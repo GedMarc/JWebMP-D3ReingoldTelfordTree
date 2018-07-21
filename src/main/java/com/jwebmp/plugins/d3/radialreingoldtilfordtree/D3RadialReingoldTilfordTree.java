@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.d3.radialreingoldtilfordtree;
+package com.jwebmp.plugins.d3.radialreingoldtilfordtree;
 
-import com.jwebmp.base.html.Div;
-import com.jwebmp.base.html.attributes.NoAttributes;
-import com.jwebmp.base.html.interfaces.GlobalChildren;
-import com.jwebmp.base.html.interfaces.events.NoEvents;
-import com.jwebmp.components.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.html.Div;
+import com.jwebmp.core.base.html.attributes.NoAttributes;
+import com.jwebmp.core.base.html.interfaces.GlobalChildren;
+import com.jwebmp.core.base.html.interfaces.events.NoEvents;
+import com.jwebmp.core.plugins.ComponentInformation;
+import com.jwebmp.plugins.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 
 /**
  * The implementation of the radial Reingold Tilford Tree.

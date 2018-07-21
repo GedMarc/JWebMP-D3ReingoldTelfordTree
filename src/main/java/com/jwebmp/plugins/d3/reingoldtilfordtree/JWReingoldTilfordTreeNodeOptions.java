@@ -14,88 +14,88 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.d3.reingoldtilfordtree;
+package com.jwebmp.plugins.d3.reingoldtilfordtree;
 
-import com.jwebmp.htmlbuilder.css.colours.ColourHex;
-import com.jwebmp.htmlbuilder.css.fonts.FontFamilies;
-import com.jwebmp.htmlbuilder.css.fonts.FontWeights;
-import com.jwebmp.htmlbuilder.css.measurement.MeasurementCSSImpl;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.htmlbuilder.css.colours.ColourHex;
+import com.jwebmp.core.htmlbuilder.css.measurement.MeasurementCSSImpl;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 /**
  * @author Marc Magon
  * @version 1.0
  * @since 06 Sep 2015
  */
-public class JWReingoldTilfordTreeTextOptions
+public class JWReingoldTilfordTreeNodeOptions
 		extends JavaScriptPart
 {
 
 	private static final long serialVersionUID = 1L;
-	private MeasurementCSSImpl fontSize;
-	private FontFamilies fontName;
-	private FontWeights fontWeight;
-	private String fontColour;
-	private Double fillOpacity;
+	private String markerType;
+	private Double markerSize;
+	private String fill;
+	private String stroke;
+	private String strokeWidth;
 	private Integer marginLeft;
 	private Integer marginRight;
 	private Integer marginTop;
 	private Integer marginBottom;
-	private String backgroundColour;
+	private Double fillOpacity;
+	private Double strokeOpacity;
 
-	public JWReingoldTilfordTreeTextOptions()
+	public JWReingoldTilfordTreeNodeOptions()
 	{
-		//No config needed
+		//Nothing needed
 	}
 
-	public MeasurementCSSImpl getFontSize()
+	public String getMarkerType()
 	{
-		return fontSize;
+		return markerType;
 	}
 
-	public void setFontSize(MeasurementCSSImpl fontSize)
+	public void setMarkerType(String markerType)
 	{
-		this.fontSize = fontSize;
+		this.markerType = markerType;
 	}
 
-	public FontFamilies getFontName()
+	public Double getMarkerSize()
 	{
-		return fontName;
+		return markerSize;
 	}
 
-	public void setFontName(FontFamilies fontName)
+	public void setMarkerSize(Double markerSize)
 	{
-		this.fontName = fontName;
+		this.markerSize = markerSize;
 	}
 
-	public FontWeights getFontWeight()
+	public String getFill()
 	{
-		return fontWeight;
+		return fill;
 	}
 
-	public void setFontWeight(FontWeights fontWeight)
+	public void setFill(ColourHex fill)
 	{
-		this.fontWeight = fontWeight;
+		this.fill = fill.getValue();
 	}
 
-	public String getFontColour()
+	public String getStroke()
 	{
-		return fontColour;
+		return stroke;
 	}
 
-	public void setFontColour(ColourHex fontColour)
+	public void setStroke(ColourHex stroke)
 	{
-		this.fontColour = fontColour.getValue();
+		this.stroke = stroke.getValue();
 	}
 
-	public Double getFillOpacity()
+	public String getStrokeWidth()
 	{
-		return fillOpacity;
+		return strokeWidth;
 	}
 
-	public void setFillOpacity(Double fillOpacity)
+	public void setStrokeWidth(MeasurementCSSImpl strokeWidth)
 	{
-		this.fillOpacity = fillOpacity;
+		this.strokeWidth = strokeWidth.toString(true)
+		                              .replace("'", "");
 	}
 
 	public Integer getMarginLeft()
@@ -138,14 +138,24 @@ public class JWReingoldTilfordTreeTextOptions
 		this.marginBottom = marginBottom;
 	}
 
-	public String getBackgroundColour()
+	public Double getFillOpacity()
 	{
-		return backgroundColour;
+		return fillOpacity;
 	}
 
-	public void setBackgroundColour(ColourHex backgroundColour)
+	public void setFillOpacity(Double fillOpacity)
 	{
-		this.backgroundColour = backgroundColour.getValue();
+		this.fillOpacity = fillOpacity;
+	}
+
+	public Double getStrokeOpacity()
+	{
+		return strokeOpacity;
+	}
+
+	public void setStrokeOpacity(Double strokeOpacity)
+	{
+		this.strokeOpacity = strokeOpacity;
 	}
 
 }

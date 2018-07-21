@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.components.d3.radialreingoldtilfordtree;
+package com.jwebmp.plugins.d3.radialreingoldtilfordtree;
 
-import com.jwebmp.base.references.CSSReference;
-import com.jwebmp.base.references.JavascriptReference;
-import com.jwebmp.base.servlets.enumarations.RequirementsPriority;
-import com.jwebmp.base.servlets.interfaces.ReferencePool;
+import com.jwebmp.core.base.references.CSSReference;
+import com.jwebmp.core.base.references.JavascriptReference;
+import com.jwebmp.core.base.servlets.enumarations.RequirementsPriority;
+import com.jwebmp.core.base.servlets.interfaces.ReferencePool;
 
 /**
  * Default reference pool structure
