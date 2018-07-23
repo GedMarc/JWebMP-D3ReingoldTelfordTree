@@ -17,8 +17,8 @@
 package com.jwebmp.plugins.d3.radialreingoldtilfordtree;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author GedMarc
@@ -39,13 +39,11 @@ import com.jwebmp.core.plugins.PluginInformation;
 		pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
 		pluginLastUpdatedDate = "2017/03/04")
 public class D3ReingoldTilfordTreePageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
-
-	private static final long serialVersionUID = 1L;
 	private static boolean ISRADIAL = false;
 
-	public static boolean isISRADIAL()
+	public static boolean isRadial()
 	{
 		return ISRADIAL;
 	}
