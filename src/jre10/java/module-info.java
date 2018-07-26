@@ -12,5 +12,6 @@ module com.jwebmp.components.d3.reingoldtilfordtree {
 	requires java.validation;
 
 	provides IPageConfigurator with D3ReingoldTilfordTreePageConfigurator;
-
+	opens com.jwebmp.plugins.d3.radialreingoldtilfordtree to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.d3.reingoldtilfordtree to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
