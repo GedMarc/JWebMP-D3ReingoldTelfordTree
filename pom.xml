@@ -41,7 +41,6 @@
             <version>${project.version}</version>
             <type>jar</type>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -49,7 +48,6 @@
             <artifactId>jwebmp-d3</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
         </dependency>
 
         <dependency>
@@ -57,7 +55,6 @@
             <artifactId>jwebmp-log-master</artifactId>
             <version>${project.version}</version>
             <classifier>${jwebmp.runtime.classifier}</classifier>
-            <optional>true</optional>
             <type>jar</type>
         </dependency>
     </dependencies>
