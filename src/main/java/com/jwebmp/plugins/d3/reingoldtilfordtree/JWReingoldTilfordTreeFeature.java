@@ -17,6 +17,7 @@
 package com.jwebmp.plugins.d3.reingoldtilfordtree;
 
 import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 
 import javax.validation.constraints.NotNull;
 
@@ -31,7 +32,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since 29 Aug 2015
  */
 public class JWReingoldTilfordTreeFeature<J extends JWReingoldTilfordTreeFeature<J>>
-		extends Feature<JWReingoldTilfordTreeOptions, J>
+		extends Feature<GlobalFeatures, JWReingoldTilfordTreeOptions, J>
 {
 
 	private static final long serialVersionUID = 1L;

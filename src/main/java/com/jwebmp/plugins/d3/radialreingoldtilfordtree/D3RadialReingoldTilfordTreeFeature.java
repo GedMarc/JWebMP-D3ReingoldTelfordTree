@@ -17,6 +17,7 @@
 package com.jwebmp.plugins.d3.radialreingoldtilfordtree;
 
 import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.plugins.d3.reingoldtilfordtree.JWReingoldTilfordTreeOptions;
 
 import static com.jwebmp.core.utilities.StaticStrings.*;
@@ -30,7 +31,7 @@ import static com.jwebmp.core.utilities.StaticStrings.*;
  * @since 29 Aug 2015
  */
 public class D3RadialReingoldTilfordTreeFeature
-		extends Feature<JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
+		extends Feature<GlobalFeatures, JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
 {
 
 	private static final long serialVersionUID = 1L;
