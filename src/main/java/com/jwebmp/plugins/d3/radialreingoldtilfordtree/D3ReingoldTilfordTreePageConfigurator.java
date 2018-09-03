@@ -43,11 +43,40 @@ import javax.validation.constraints.NotNull;
 public class D3ReingoldTilfordTreePageConfigurator
 		implements IPageConfigurator
 {
+	/**
+	 * If this configurator is enabled
+	 */
+	private static boolean enabled = true;
 	private static boolean ISRADIAL = false;
+
+	/**
+	 * Method isEnabled returns the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @return the enabled (type boolean) of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static boolean isEnabled()
+	{
+		return D3ReingoldTilfordTreePageConfigurator.enabled;
+	}
+
+	/**
+	 * Method setEnabled sets the enabled of this AngularAnimatedChangePageConfigurator object.
+	 * <p>
+	 * If this configurator is enabled
+	 *
+	 * @param mustEnable
+	 * 		the enabled of this AngularAnimatedChangePageConfigurator object.
+	 */
+	public static void setEnabled(boolean mustEnable)
+	{
+		D3ReingoldTilfordTreePageConfigurator.enabled = mustEnable;
+	}
 
 	public static boolean isRadial()
 	{
-		return ISRADIAL;
+		return D3ReingoldTilfordTreePageConfigurator.ISRADIAL;
 	}
 
 	public static void setIsRadial(boolean ISRADIAL)
@@ -61,7 +90,7 @@ public class D3ReingoldTilfordTreePageConfigurator
 	{
 		if (!page.isConfigured())
 		{
-			if (!ISRADIAL)
+			if (!D3ReingoldTilfordTreePageConfigurator.ISRADIAL)
 			{
 				page.getBody()
 				    .addJavaScriptReference(D3RadialTreesReferencePool.ReingoldTilfodTree.getJavaScriptReference());
@@ -77,5 +106,11 @@ public class D3ReingoldTilfordTreePageConfigurator
 			}
 		}
 		return page;
+	}
+
+	@Override
+	public boolean enabled()
+	{
+		return D3ReingoldTilfordTreePageConfigurator.enabled;
 	}
 }
