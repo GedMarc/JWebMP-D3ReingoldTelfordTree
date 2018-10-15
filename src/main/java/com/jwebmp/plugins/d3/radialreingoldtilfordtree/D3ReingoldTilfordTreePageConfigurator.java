@@ -33,15 +33,15 @@ import javax.validation.constraints.NotNull;
 		pluginCategories = "d3, graphing, reports, graphs",
 		pluginSubtitle = "Create stunning graphs using the D3 toolkit.",
 		pluginGitUrl = "http://txt2vz.appspot.com/",
-		pluginSourceUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-D3ReingoldTelfordTree/wiki",
+		pluginSourceUrl = "https://github.com/GedMarc/JWebMP-D3ReingoldTelfordTree",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-D3ReingoldTelfordTree/wiki",
 		pluginOriginalHomepage = "http://txt2vz.appspot.com/",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/D3ReingoldTelfordTree.jar/download",
 		pluginIconUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
 		pluginIconImageUrl = "bower_components/jqd3/radial-reingold-tilford-tree/logo.png",
 		pluginLastUpdatedDate = "2017/03/04")
 public class D3ReingoldTilfordTreePageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<D3ReingoldTilfordTreePageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
