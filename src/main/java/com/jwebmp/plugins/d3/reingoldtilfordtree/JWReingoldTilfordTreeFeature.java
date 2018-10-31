@@ -35,7 +35,7 @@ public class JWReingoldTilfordTreeFeature<J extends JWReingoldTilfordTreeFeature
 		extends Feature<GlobalFeatures, JWReingoldTilfordTreeOptions, J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private final JWReingoldTilfordTree myTree;
 	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 

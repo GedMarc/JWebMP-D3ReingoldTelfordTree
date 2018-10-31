@@ -36,7 +36,7 @@ public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>>
 		extends Div
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private JWReingoldTilfordTreeFeature feature;
 
 	public JWReingoldTilfordTree()
@@ -63,14 +63,14 @@ public class JWReingoldTilfordTree<J extends JWReingoldTilfordTree<J>>
 	}
 
 	@Override
-	public boolean equals(Object o)
-	{
-		return super.equals(o);
-	}
-
-	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 }

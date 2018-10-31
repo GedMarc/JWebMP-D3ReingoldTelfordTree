@@ -34,7 +34,7 @@ public class D3RadialReingoldTilfordTreeFeature
 		extends Feature<GlobalFeatures, JWReingoldTilfordTreeOptions, D3RadialReingoldTilfordTreeFeature>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private final D3RadialReingoldTilfordTree myTree;
 	private JWReingoldTilfordTreeOptions options = new JWReingoldTilfordTreeOptions();
 

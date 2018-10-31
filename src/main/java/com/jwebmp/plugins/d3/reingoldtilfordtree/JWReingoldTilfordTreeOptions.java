@@ -37,7 +37,7 @@ public class JWReingoldTilfordTreeOptions
 	/**
 	 * Version 1
 	 */
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The diameter
 	 */

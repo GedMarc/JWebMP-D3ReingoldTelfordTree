@@ -31,7 +31,7 @@ public class JWReingoldTilfordTreeTextOptions
 		extends JavaScriptPart
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private MeasurementCSSImpl fontSize;
 	private FontFamilies fontName;
 	private FontWeights fontWeight;

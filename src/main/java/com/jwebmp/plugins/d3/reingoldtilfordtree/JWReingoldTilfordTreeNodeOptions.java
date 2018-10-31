@@ -29,7 +29,7 @@ public class JWReingoldTilfordTreeNodeOptions
 		extends JavaScriptPart
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private String markerType;
 	private Double markerSize;
 	private String fill;

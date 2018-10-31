@@ -39,7 +39,7 @@ public class D3RadialReingoldTilfordTree
 		extends Div<IComponentHierarchyBase, NoAttributes, D3RadialReingoldTilfordTreeFeature, NoEvents, D3RadialReingoldTilfordTree>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private D3RadialReingoldTilfordTreeFeature feature;
 
 	/**

@@ -25,7 +25,6 @@ public class JWReingoldTilfordTreeLinkOptions
 		extends JWReingoldTilfordTreeNodeOptions
 {
 
-	private static final long serialVersionUID = 1L;
 
 	public JWReingoldTilfordTreeLinkOptions()
 	{
