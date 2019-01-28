@@ -1,11 +1,9 @@
-package com.jwebmp.plugins.d3.implementations;
+package com.jwebmp.plugins.d3.reingoldtilfordtree.implementations;
 
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
+import com.jwebmp.guicedinjection.interfaces.*;
 
-import javax.validation.constraints.NotNull;
-import java.util.HashSet;
-import java.util.Set;
+import javax.validation.constraints.*;
+import java.util.*;
 
 public class D3ReingoldTreeExclusionsModule
 		implements IGuiceScanModuleExclusions<D3ReingoldTreeExclusionsModule>,
