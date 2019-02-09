@@ -88,7 +88,7 @@ public class D3ReingoldTilfordTreePageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
+		if (!page.isConfigured() && enabled())
 		{
 			if (!D3ReingoldTilfordTreePageConfigurator.ISRADIAL)
 			{
